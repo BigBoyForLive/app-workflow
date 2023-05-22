@@ -1,6 +1,6 @@
-FROM marwaney/ssh-server:ubuntu
+FROM marwaney/ssh-server
 
-COPY /home/haruna/.ssh/id_ed25519.pub /home/sshuser/.ssh/authorized_keys 
+COPY provisionning.pub /home/sshuser/.ssh/authorized_keys 
 
 CMD [ "/usr/sbin/sshd", "-D" ]
 

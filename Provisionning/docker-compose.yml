@@ -3,7 +3,6 @@ services:
   server-1: 
     build: .
     container_name: server1
-    command: sleep infinity 
     networks:
       - network1
     volumes: 
@@ -13,7 +12,6 @@ services:
   server-2:
     build: .
     container_name: server2
-    command: sleep infinity
     networks:
       - network2
     volumes:
