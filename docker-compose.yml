@@ -1,0 +1,26 @@
+version: "3" 
+services: 
+  server-1: 
+    image: ubuntu 
+    container_name: server1
+    command: sleep infinity 
+    networks:
+      - network1
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+
+  server-2:
+    image: ubuntu
+    container_name: server2
+    command: sleep infinity
+    networks:
+      - network2
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+networks:
+  network1: 
+  network2: 
+  
+
